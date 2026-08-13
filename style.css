@@ -1,0 +1,383 @@
+/*===============BODY=============*/
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*========HEADER============*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: whitesmoke;
+    position: relative;
+    z-index: 999;
+}
+/*=============LOGO==========*/
+.logo img{
+    width: 70px;
+    height: 70px;
+    border-radius: 25px;
+}
+/*=========SCHOOL NAME=======*/
+.school-name h2{
+    color: darkblue;
+    font-size: 38px;
+    font-weight: bolder;
+}
+/*===============MENU=============*/
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+.menu li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+.menu li a:hover{
+    color: lightgray;
+}
+/*=============DROPDOWN=========*/
+.dropdown{
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    list-style: none;
+    width: 240px;
+    padding: 10 0px;
+    margin: 0px;
+    z-index: 9999;
+    opacity: 0.95;
+    
+}
+.dropdown li{
+    padding: 12px 20px;
+}
+.dropdown li:hover{
+    background: #f2f2f2;
+}
+.drop:hover .dropdown{
+    display: block;
+}
+
+/*============HERO=========*/
+.hero{
+    margin: 0;
+    padding-top: 0;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    z-index: 99;
+}
+/*===========SLIDES========*/
+.slide{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: slider 15s infinite;
+}
+.slide img{
+    width: 100%;
+    height: 500px;
+    display: block;
+}
+/*==============HERO TEXT===========*/
+.hero-text{
+    position: absolute;
+    right: 90px;
+    bottom: 60px;
+    background: black;
+    border-radius: 15px;
+    opacity: 0.7;
+    padding: 25px ;
+}
+.hero-text p{
+    font-size: 20px;
+    color: white;
+}
+.hero-text h1{
+    margin: 0;
+    font-size: 70px;
+    color: white;
+}
+/*==============SLIDE TIMING=========*/
+.slide:nth-child(1){
+    animation-delay: 0s;
+}
+.slide:nth-child(2){
+    animation-delay: 5s;
+}
+.slide:nth-child(3){
+    animation-delay: 10s;
+}
+/*============KEYFRAMES============*/
+@keyframes slider{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    30%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/*=============INFORMATION SECTION===========*/
+.information{
+    display: flex;
+    justify-content: space-around;
+    padding: 60px;
+    gap: 30px;
+    margin-top: 20px;
+}
+/*======================CARDS================*/
+.card{
+    width: 300px;
+}
+.card img{
+    width: 100%;
+    height: 100px;
+}
+.card h2{
+    margin-top: 20px;
+}
+.card p{
+    line-height: 25px;
+    color: gray;
+}
+.card a{
+    display: inline-block;
+    text-decoration: none;
+    background: lightblue;
+    color: white;
+    padding: 12px 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+.card a:hover{
+    background: darkblue;
+}
+/*=========GALLERY SECTION==============*/
+.gallery{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 40px;
+}
+.gallery-box{
+    width: 500px;
+    height: 200px;
+}
+.gallery-box img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+/*===============FOOTER==========*/
+footer{
+    display: flex;
+    justify-content: space-around;
+    background: #222;
+    color: white;
+    padding: 50px;
+}
+.footer-box{
+    width: 30%;
+}
+.footer-box h3{
+    color: lightgray;
+    margin-bottom: 20px;
+}
+.footer-box p{
+    line-height: 28px;
+}
+.footer-box img{
+    width: 100%;
+    height: 150px;
+    border-radius: 20px;
+}
+/*=================ARCHIVE=============*/
+.archive{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.archive-box{
+    width: 40px;
+    height: 40px;
+    background: #444;
+    margin-right: 15px;
+}
+.archive-text p{
+    margin: 5px;
+}
+
+/*====================@media Android=========*/
+@media(max-width:768px){
+    header{
+        flex-direction: column;
+        padding: 15px;
+    }
+    .logo img{
+        width: 60px;
+        height: 60px;
+    }
+    .school-name h2{
+        font-size: 20px;
+        text-align: center;
+    }
+    .menu{
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .dropdown{
+        position: static;
+        width: 100%;
+    }
+    .hero{
+        height: 300px;
+    }
+    .slide img{
+        width: 100%;
+        height: 300px;
+    }
+    .hero-text{
+        left: 20px;
+        bottom: 20px;
+        padding: 15px;
+        width: 80%;
+    }
+    .hero-text h1{
+        font-size: 28px;
+    }
+    .hero-text p{
+        font-size: 15px;
+    }
+    .information{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 90%;
+        margin-bottom: 30px;
+    }
+    .gallery{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .gallery-box{
+        width: 90%;
+        height: 250px;
+        margin-bottom: 15px;
+    }
+    footer{
+        flex-direction: column;
+        padding: 30px;
+    }
+    .footer-box{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+@media(min-width:769px) and (max-width:925px){
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+    }
+    .logo img{
+        width: 60px;
+        height: 70px;
+    }
+    .school-name h2{
+        font-size: 20px;
+    }
+    .menu{
+        gap: 20px;
+    }
+    .menu li{
+        font-size: 15px;
+    }
+    .dropdown{
+        width: 200px;
+    }
+    .hero{
+        height: 450px;
+    }
+    .slide img{
+        width: 100%;
+        height: 450px;
+    }
+    .slide{
+        height: 450px;
+    }
+    .hero-text{
+        width: 60%;
+        padding: 20px;
+        left: 40px;
+        bottom: 30px;
+    }
+    .hero-text h1{
+        font-size: 45px;
+    }
+    .hero-text p{
+        font-size: 18px;
+    }
+    .information{
+        font-size: 20px;
+    }
+    .card{
+        width: 45%;
+    }
+    .card img{
+        width: 100%;
+        height: 100px;
+    }
+    .gallery{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        width: 90%;
+    }
+    .gallery-box{
+        width: 45%;
+        height: 200px;
+    }
+    .gallery-box img{
+        width: 100%;
+        height: 100%;
+    }
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .footer-box{
+        background: 10p;
+
+}
+}
